@@ -1,35 +1,35 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React from "react";
+import FlightComponent from "../components/FlightComponent";  
+import flightsData from "../src/flights.json";  
+import { useState, useEffect } from "react";
+
 
 const ContactInfo = () => {
-  const router = useRouter();
-    const { id } = router.query;
-    const [flight, setFlight] = useState(null);
+  const [flight, setFlight] = useState([]);
+
+  useEffect(() => {
+    setFlight(flightsData);
+  }, []);
+  // const router = useRouter();
+  //   const { id } = router.query;
+  //   const [flight, setFlights] = useState(null);
+  //   const [loading, setLoading] = useState(true);
   
-    useEffect(() => {
-      if (id) {
-        const foundFlight = data.find((item) => item.id === parseInt(id));
-        if (foundProduct) {
-          setProduct(foundProduct);
-        } else {
-          console.error("ERROR_PRODUCT_IS_NOT_FOUND");
-        }
-        const productReviews = dataReview.filter(
-          (review) => review.productId === parseInt(id)
-        );
+  //   useEffect(() => {
+  //     if (id) {
+  //       const foundFlight = data.find((item) => item.id === parseInt(id));
+  //       if (foundFlight) {
+  //         setFlights(foundFlight);
+  //         setLoading(false);
+  //       } else {
+  //           setLoading(true);
+
+  //       }
+  //     }
+  //   }, [id]);
   
-        const reviewCards = data.find((item) => item.id === parseInt(id));
-        if (reviewCards) {
-          setReviewCard(reviewCards);
-        }
-        setReviews(productReviews);
-      }
-    }, [id]);
-  
-    if (!product) {
-      return <h2>Loading product..</h2>;
-    }
 
   return (
     <div>
@@ -39,44 +39,47 @@ const ContactInfo = () => {
         </Link>
       </p>
       <h1>Planeeri lendu!</h1>
-      <p>Tekst</p>
 
 
       {/* Lennude leidmise section */}
+      <h2>Lennuinfo</h2>
       <section >
-        <h2>Lennuinfo</h2>
         <search>
           <form method="submit">
             <input name="searchBar" id="search" placeholder="Leia lendu.."/>
             <input type="submit" name="submit" value="Otsi"/>
           </form>
         </search>
-        <p>
-          
-        </p>
-
+        <FlightComponent id={3}/>
       </section>
 
+      {/* Firmade leidmine */}
       <form method="submit">
-        <p>Vali firma:</p>
-        <section>
-        <select>
+      <section>
+      <label for="Firma">Vali Firma </label>
+      <select>
           <option> Airbaltic</option>
           <option> Ryanair</option>
           <option> SAS </option>
           <option> Finlandia</option>
         </select>
         </section>
+
+        <section>
+        <label for="Kuupäev">Vali Kuupäev</label>
+        <input type="date" id="flightDate" name="date"/>
+        <input type="submit"></input>
+        </section>
         
         {/* sihtkoht, lõppkoht */}
-        <section>
+        {/* <section>
           <select>
           <option> New York</option>
           <option> London</option>
           <option> Dubai </option>
           <option> Madrid</option>
           </select>
-        </section>
+        </section> */}
 
         <section>
         Vali sihtkoht: <input type="text" placeholder="Sisesta sihtkoht ..."/>
@@ -84,6 +87,8 @@ const ContactInfo = () => {
         <section>
         Vali lõppkoht: <input type="text" placeholder="Sisesta lõppkoht ..."/>
         </section>
+
+        <h2>Sisesta andmed:</h2>
         <section>
         Sisesta eesnimi: <input type="text" placeholder="Sisesta lõppkoht ..."/>
         </section>
