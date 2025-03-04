@@ -1,0 +1,92 @@
+[
+  {
+    "flightNumber": "AA123",
+    "departure": "JFK",
+    "arrival": "LAX",
+    "departureTime": "2025-03-10T08:30:00",
+    "arrivalTime": "2025-03-10T11:45:00",
+    "price": 350.00,
+    "airline": "American Airlines"
+  },
+  {
+    "flightNumber": "DL456",
+    "departure": "ATL",
+    "arrival": "ORD",
+    "departureTime": "2025-03-11T14:15:00",
+    "arrivalTime": "2025-03-11T16:30:00",
+    "price": 220.50,
+    "airline": "Delta Airlines"
+  },
+  {
+    "flightNumber": "UA789",
+    "departure": "SFO",
+    "arrival": "SEA",
+    "departureTime": "2025-03-12T10:00:00",
+    "arrivalTime": "2025-03-12T12:20:00",
+    "price": 180.75,
+    "airline": "United Airlines"
+  },
+  {
+    "flightNumber": "BA101",
+    "departure": "LHR",
+    "arrival": "JFK",
+    "departureTime": "2025-03-13T18:45:00",
+    "arrivalTime": "2025-03-13T22:30:00",
+    "price": 750.00,
+    "airline": "British Airways"
+  },
+  {
+    "flightNumber": "LH202",
+    "departure": "FRA",
+    "arrival": "DXB",
+    "departureTime": "2025-03-14T23:10:00",
+    "arrivalTime": "2025-03-15T06:45:00",
+    "price": 480.25,
+    "airline": "Lufthansa"
+  },
+  {
+    "flightNumber": "QR303",
+    "departure": "DOH",
+    "arrival": "SYD",
+    "departureTime": "2025-03-15T01:30:00",
+    "arrivalTime": "2025-03-15T20:10:00",
+    "price": 980.00,
+    "airline": "Qatar Airways"
+  },
+  {
+    "flightNumber": "EK404",
+    "departure": "DXB",
+    "arrival": "SIN",
+    "departureTime": "2025-03-16T09:15:00",
+    "arrivalTime": "2025-03-16T18:30:00",
+    "price": 640.90,
+    "airline": "Emirates"
+  },
+  {
+    "flightNumber": "AF505",
+    "departure": "CDG",
+    "arrival": "JNB",
+    "departureTime": "2025-03-17T12:00:00",
+    "arrivalTime": "2025-03-17T22:50:00",
+    "price": 730.00,
+    "airline": "Air France"
+  },
+  {
+    "flightNumber": "TK606",
+    "departure": "IST",
+    "arrival": "BKK",
+    "departureTime": "2025-03-18T03:45:00",
+    "arrivalTime": "2025-03-18T17:10:00",
+    "price": 550.00,
+    "airline": "Turkish Airlines"
+  },
+  {
+    "flightNumber": "JL707",
+    "departure": "NRT",
+    "arrival": "LAX",
+    "departureTime": "2025-03-19T22:15:00",
+    "arrivalTime": "2025-03-19T14:30:00",
+    "price": 890.00,
+    "airline": "Japan Airlines"
+  }
+]
