@@ -5,11 +5,11 @@ import React from "react";
 const ContactInfo = () => {
   const router = useRouter();
     const { id } = router.query;
-    const [time, setTime] = useState(null);
+    const [flight, setFlight] = useState(null);
   
     useEffect(() => {
       if (id) {
-        const foundProduct = data.find((item) => item.id === parseInt(id));
+        const foundFlight = data.find((item) => item.id === parseInt(id));
         if (foundProduct) {
           setProduct(foundProduct);
         } else {
