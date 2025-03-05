@@ -2,34 +2,31 @@
 import Link from "next/link";
 import React from "react";
 import FlightComponent from "../components/FlightComponent";  
-import flightsData from "../src/flights.json";  
+// flightsData from "../flights.json";  
 import { useState, useEffect } from "react";
 
 
 const ContactInfo = () => {
-  const [flight, setFlight] = useState([]);
+  const [flight, setFlights] = useState([]);
+  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
-    setFlight(flightsData);
-  }, []);
-  // const router = useRouter();
-  //   const { id } = router.query;
-  //   const [flight, setFlights] = useState(null);
-  //   const [loading, setLoading] = useState(true);
-  
-  //   useEffect(() => {
-  //     if (id) {
-  //       const foundFlight = data.find((item) => item.id === parseInt(id));
-  //       if (foundFlight) {
-  //         setFlights(foundFlight);
-  //         setLoading(false);
-  //       } else {
-  //           setLoading(true);
+    const fetchFlights = async () => {
+      try {
+        const response = await fetch("/api/flights"); 
+        const data = await response.json();
+        setFlights(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("ERROR_FLIGHTS_ARE_NOT_FOUND");
+        setLoading(false);
 
-  //       }
-  //     }
-  //   }, [id]);
-  
+      }
+    };
+
+    fetchFlights();
+  }, []);
 
   return (
     <div>
@@ -40,7 +37,6 @@ const ContactInfo = () => {
       </p>
       <h1>Planeeri lendu!</h1>
 
-
       {/* Lennude leidmise section */}
       <h2>Lennuinfo</h2>
       <section >
@@ -50,7 +46,7 @@ const ContactInfo = () => {
             <input type="submit" name="submit" value="Otsi"/>
           </form>
         </search>
-        <FlightComponent id={3}/>
+        <FlightComponent flights={flight} />
       </section>
 
       {/* Firmade leidmine */}

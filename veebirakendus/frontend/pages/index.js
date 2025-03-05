@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";//
 import Head from "next/head";
 //import data from "../src/data.json";
-import ContactInfo from "../components/Main";
+import Flights from "../components/Main";
 // import Header from "../components/Header";
 // import Introduction from "../components/Introduction";
 // import ProductsList from "../components/ProductsList";
@@ -20,7 +19,7 @@ export default function Home() {
       <Head>
         <title>Lennud</title>
       </Head>
-      <ContactInfo />
+      <Flights />
       {/* <Header />
       <Introduction />
       <ProductsList />
