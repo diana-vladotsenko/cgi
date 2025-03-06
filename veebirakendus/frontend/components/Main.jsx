@@ -2,20 +2,24 @@
 import Link from "next/link";
 import React from "react";
 import FlightComponent from "../components/FlightComponent";  
-// flightsData from "../flights.json";  
 import { useState, useEffect } from "react";
 
 
-const ContactInfo = () => {
-  const [flight, setFlights] = useState([]);
+const flightsData = () => {
+  //flights - empty array
+  const [flights, setFlights] = useState([]);
   const [loading, setLoading] = useState(true);
 
 
-  useEffect(() => {
+  useEffect((i) => {
     const fetchFlights = async () => {
       try {
+        //fetch is a method HTTP of get throught url
         const response = await fetch("/api/flights"); 
+        //Ответ преобразуется из формата JSON в JavaScript-объект
         const data = await response.json();
+        //console.log(data);
+        //saving flights
         setFlights(data);
         setLoading(false);
       } catch (error) {
@@ -24,8 +28,9 @@ const ContactInfo = () => {
 
       }
     };
-
+    // Calling a function to render a data, after first rendering
     fetchFlights();
+    //Empty array says, that dont need to call this function again, so call it once
   }, []);
 
   return (
@@ -39,6 +44,16 @@ const ContactInfo = () => {
 
       {/* Lennude leidmise section */}
       <h2>Lennuinfo</h2>
+      <section className="filter">
+        <select >
+          <option>Price (Lowest to highest)</option>
+          <option>Price (Highest to lowest)</option>
+          {/* <option></option>
+          <option></option> */}
+          
+        </select>
+
+      </section>
       <section >
         <search>
           <form method="submit">
@@ -46,12 +61,13 @@ const ContactInfo = () => {
             <input type="submit" name="submit" value="Otsi"/>
           </form>
         </search>
-        <FlightComponent flights={flight} />
+        <FlightComponent flights={flights} />
       </section>
 
       {/* Firmade leidmine */}
       <form method="submit">
       <section>
+
       <label for="Firma">Vali Firma </label>
       <select>
           <option> Airbaltic</option>
@@ -111,4 +127,4 @@ const ContactInfo = () => {
   );
 };
 
-export default ContactInfo;
+export default flightsData;

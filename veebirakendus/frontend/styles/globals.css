@@ -24,3 +24,16 @@ section{
   padding:5px;
   
 }
+.primary-button{
+  display:block;
+  border: 1px solid black;
+  border-radius:20px;
+  padding:10px;
+  color: white;
+  background-color: black;
+  margin:20px;
+}
+.primary-button:hover{
+    border-radius:5px;
+    background-color: rgb(107, 106, 106);
+}
