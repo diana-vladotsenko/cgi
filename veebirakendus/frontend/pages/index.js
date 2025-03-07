@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Lennud</title>
+        <title>Airplanes</title>
       </Head>
-      <Main />
+      <Main/>
     </>
   );
 }

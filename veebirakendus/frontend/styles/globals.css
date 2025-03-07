@@ -6,6 +6,14 @@ html{
   scroll-behavior: smooth;
 }
 
+.flights-page{
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-top:50px;
+  margin-bottom:50px;
+  flex-direction:column;
+}
+
 section{
   display:flex;
   margin-top: 20px;
@@ -19,11 +27,7 @@ section{
   justify-content: flex-start;
   align-items: center;
 }
-.card-container{
-  display:block;
-  padding:5px;
-  
-}
+
 .primary-button{
   display:block;
   border: 1px solid black;
@@ -32,8 +36,45 @@ section{
   color: white;
   background-color: black;
   margin:20px;
+  cursor:pointer;
+  width:120px;
+  height:40px;
+  align-items:center;
+  justify-content:flex-end;
+  font-size:14px;
 }
 .primary-button:hover{
-    border-radius:5px;
-    background-color: rgb(107, 106, 106);
+    background-color: rgb(155, 154, 154);
+    border: 1px solid rgb(155, 154, 154);
+}
+.filter{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+.search-bar-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.inputs-rounded{
+  display:block;
+  border-radius:20px;
+  width: 80px;
+  height: 40px;
+  border: 1px solid rgb(0, 0, 0);
+  font-size:14px;
+}
+.inputs-rounded:hover{
+  border: 1px solid rgb(155, 154, 154);
+}
+.card-container{
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  align-items:center;
+}
+label{
+  display:flex;
+  font-size:18px;
 }
