@@ -1,7 +1,8 @@
-package ee.veebirakendus.repository;
+package ee.cgi.veebirakendus.repository;
 
-import ee.veebirakendus.entity.Flight;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import ee.cgi.veebirakendus.entity.Flight;
 
 public interface FlightRepository extends JpaRepository<Flight, Long> {
 }

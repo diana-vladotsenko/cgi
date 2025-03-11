@@ -1,4 +1,4 @@
-package ee.veebirakendus.exception;
+package ee.cgi.veebirakendus.exception;
 
 import lombok.Data;
 

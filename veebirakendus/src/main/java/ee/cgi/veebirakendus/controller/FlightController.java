@@ -1,12 +1,12 @@
-package ee.veebirakendus.controller;
+package ee.cgi.veebirakendus.controller;
 
-import ee.veebirakendus.Flight;
-import ee.veebirakendus.repository.FlightRepository;
+import ee.cgi.veebirakendus.Flight;
+import ee.cgi.veebirakendus.repository.FlightRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.List;
 
 

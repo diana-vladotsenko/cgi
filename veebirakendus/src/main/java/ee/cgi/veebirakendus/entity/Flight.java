@@ -1,4 +1,4 @@
-package ee.veebirakendus.entity;
+package ee.cgi.veebirakendus.entity;
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
