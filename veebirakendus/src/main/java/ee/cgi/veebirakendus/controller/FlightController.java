@@ -1,13 +1,14 @@
 package ee.cgi.veebirakendus.controller;
 
-import ee.cgi.veebirakendus.Flight;
-import ee.cgi.veebirakendus.repository.FlightRepository;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-//import java.util.ArrayList;
-import java.util.List;
+import ee.cgi.veebirakendus.entity.Flight;
+import ee.cgi.veebirakendus.repository.FlightRepository;
 
 
 @RestController
@@ -17,7 +18,7 @@ public class FlightController {
     FlightRepository flightRepository;
 
     @GetMapping
-    public List<FLight> getAllData() {
+    public List<Flight> getAllData() {
         return flightRepository.findAll();
     }
 
