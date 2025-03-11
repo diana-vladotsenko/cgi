@@ -1,4 +1,4 @@
-package ee.cgi.veebirakendus.exception;
+package ee.veebirakendus.exception;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

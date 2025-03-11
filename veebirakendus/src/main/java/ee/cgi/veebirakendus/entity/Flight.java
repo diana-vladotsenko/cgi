@@ -1,4 +1,4 @@
-package ee.cgi.veebirakendus.entity;
+package ee.veebirakendus.entity;
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private int age;
     private String destination;
     private LocalDate date;
