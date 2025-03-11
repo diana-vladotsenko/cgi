@@ -1,7 +1,6 @@
 import React from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { format } from "date-fns";
 import { useState, useEffect } from "react";
 
 
@@ -13,7 +12,7 @@ const ChooseDate = () => {
   
   return (
     
-    <section>
+    <section style={{justifyContent: "center"}}>
           <DatePicker
             selected={returnDate}
             onChange={(date) => setReturnDate(date)}

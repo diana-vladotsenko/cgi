@@ -82,4 +82,19 @@ label{
   justify-content:center;
   align-items:center;
 }
-
+.airports-button{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.airports-button:hover{
+  transition: 0.5s;
+  border: 1px solid #0000009f;
+}
